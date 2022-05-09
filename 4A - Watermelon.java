@@ -9,17 +9,15 @@ public class Solution_2 {
 		Scanner sc = new Scanner(System.in);
 		int kilo = sc.nextInt();
 		
-		if(kilo <= 1 || kilo <= 100)
-			System.out.println(waterMelon(kilo));
-		else
-			System.out.println("NO");
+		while((kilo < 1 || kilo > 100))
+			kilo = sc.nextInt();
+		System.out.println(waterMelon(kilo));
 	}
 
 	public static String waterMelon(int i) {
-		if(i % 2 == 0)
-			return "YES";
-		else
+		if(i % 2 != 0 || i <= 2)
 			return "NO";
+		return "YES";
 	}
 
 	
