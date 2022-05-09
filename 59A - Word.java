@@ -1,6 +1,7 @@
+import java.util.Scanner;
 
-public class Solution {
-
+public class Solution_2 {
+ 
 	public static void main(String[] args) {
 		
 		//Basically if we have more lowercase than uppercase then the whole string is lowercase and vice versa
@@ -13,12 +14,13 @@ public class Solution {
 		
 		//if == then lowercase
 		
-		System.out.println(caseChecker("ViP"));
-		System.out.println(caseChecker("HoUse"));
-		System.out.println(caseChecker("maTRIx"));
-		System.out.println(caseChecker("ChiCken"));
+		Scanner sc = new Scanner(System.in);
+		String word = sc.nextLine();
+		
+		
+		System.out.println(caseChecker(word));
 	}
-
+ 
 	public static String caseChecker(String s) {
 		byte count = 0;
 		for(int i = 0; i < s.length(); i++) {
